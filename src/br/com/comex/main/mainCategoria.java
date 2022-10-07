@@ -4,7 +4,7 @@ import br.com.comex.modelo.Categoria;
 import br.com.comex.modelo.Status;
 
 
-public class mainCategoria {
+public class MainCategoria {
 	public static void main(String[] args) {
 		
 		Categoria c1 = new Categoria(1, "INFORMATICA");

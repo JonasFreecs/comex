@@ -4,7 +4,7 @@ import br.com.comex.modelo.Produto;
 import br.com.comex.modelo.ProdutoIsento;
 import br.com.comex.modelo.ProdutoTributado;
 
-public class mainProduto {
+public class MainProduto {
 	public static void main(String[] args) {
 		
 		Produto p1 = new ProdutoTributado(1, "Notebook Samsung", 3253, 1, "Informatica");
