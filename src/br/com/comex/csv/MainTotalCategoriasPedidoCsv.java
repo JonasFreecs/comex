@@ -12,7 +12,7 @@ public class MainTotalCategoriasPedidoCsv {
 		List<PedidoCsv> pedidosCsv = leitorPedidoCsv.lerListaPedidos();
 		
 		int totalDeCategorias = 0;
-		ArrayList comparadora = new ArrayList();
+		ArrayList<String> comparadora = new ArrayList<String>();
 		
 		for (int i = 0; i < pedidosCsv.size(); i++) {
 			if(!comparadora.contains(pedidosCsv.get(i).getCategoria())) {
