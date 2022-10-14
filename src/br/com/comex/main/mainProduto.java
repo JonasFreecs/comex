@@ -23,7 +23,6 @@ public class MainProduto {
 		System.out.println("Valor total em estoque: " + p3.calculaEstoque() + ", Impostos aproximados: " + p3.calculaImposto());
 		System.out.println();
 		
-		Produto p4 = new ProdutoTributado(5, "test", 1889, 3, "Informatica");
 	
 	}
 }
