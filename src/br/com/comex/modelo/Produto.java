@@ -1,20 +1,41 @@
 package br.com.comex.modelo;
 
-public abstract class Produto {
-	private int id;
+public class Produto {
+	private long id;
 	private String nome;
 	private String descricao;
 	private double precoUnitario;
 	private int quantidadeEstoque;
-	private String categoria;
+	private int categoriaId;
+	private Tipo tipo = Tipo.NAO_ISENTO;
+	
+public Produto (String nome, String descricao, double precoUnitario, int quantidadeEstoque, int categoria, Tipo tipo) {
+	this.nome = nome;
+	this.descricao = descricao;
+	this.precoUnitario = precoUnitario;
+	this.quantidadeEstoque = quantidadeEstoque;
+	this.categoriaId = categoria;
+	IllegalArgumentException ex = new IllegalArgumentException();
+	
+	int tamanhoNome = this.nome.length();
+	
+	if( tamanhoNome < 5 || this.precoUnitario < 0 || this.quantidadeEstoque < 0 ) {
+		throw ex;
+	}
+}
 
-public Produto(int id, String nome, double precoUnitario, int quantidadeEstoque, String categoria) {
+public Produto(Long id) {
+	this.id = id;
+}
+	
+
+public Produto(long id, String nome, double precoUnitario, int quantidadeEstoque, int categoria) {
 		
 		this.id = id;
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;
 		this.quantidadeEstoque = quantidadeEstoque;
-		this.categoria = categoria;
+		this.categoriaId = categoria;
 		IllegalArgumentException ex = new IllegalArgumentException();
 		
 		int tamanhoNome = this.nome.length();
@@ -22,16 +43,33 @@ public Produto(int id, String nome, double precoUnitario, int quantidadeEstoque,
 		if(this.id <= 0 || tamanhoNome < 5 || this.precoUnitario < 0 || this.quantidadeEstoque < 0 ) {
 			throw ex;
 		}
-	}
-
-public Produto(int id, String nome, String descricao, double precoUnitario, int quantidadeEstoque, String categoria) {
+}
+public Produto(long id, String nome, String descricao, double precoUnitario, int quantidadeEstoque, int categoria, Tipo tipo) {
 	
 	this.id = id;
 	this.nome = nome;
 	this.descricao = descricao;
 	this.precoUnitario = precoUnitario;
 	this.quantidadeEstoque = quantidadeEstoque;
-	this.categoria = categoria;
+	this.categoriaId = categoria;
+	this.tipo = tipo;
+	IllegalArgumentException ex = new IllegalArgumentException();
+	
+	int tamanhoNome = this.nome.length();
+	
+	if(this.id <= 0 || tamanhoNome < 5 || this.precoUnitario < 0 || this.quantidadeEstoque < 0 ) {
+		throw ex;
+	}
+}
+
+public Produto(long id, String nome, String descricao, double precoUnitario, int quantidadeEstoque, int categoria) {
+	
+	this.id = id;
+	this.nome = nome;
+	this.descricao = descricao;
+	this.precoUnitario = precoUnitario;
+	this.quantidadeEstoque = quantidadeEstoque;
+	this.categoriaId = categoria;
 	IllegalArgumentException ex = new IllegalArgumentException();
 	
 	int tamanhoNome = this.nome.length();
@@ -41,11 +79,11 @@ public Produto(int id, String nome, String descricao, double precoUnitario, int 
 	}
 }
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(long l) {
+		this.id = l;
 	}
 	
 	public String getNome() {
@@ -76,11 +114,11 @@ public Produto(int id, String nome, String descricao, double precoUnitario, int 
 		this.quantidadeEstoque = quantidadeEstoque;
 	}
 	
-	public String getCategoria() {
-		return categoria;
+	public int getCategoriaId() {
+		return categoriaId;
 	}
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategoriaId(int categoria) {
+		this.categoriaId = categoria;
 	}
 	
 	public double calculaEstoque() {
@@ -93,8 +131,25 @@ public Produto(int id, String nome, String descricao, double precoUnitario, int 
 	public double calculaImposto() {
 		double imposto;
 		
-		imposto = this.precoUnitario * 0.40;
-		
+		if (this.tipo != Tipo.ISENTO) {
+			imposto = this.precoUnitario * 0.40;
+		} else {	
+			imposto = 0;
+		}
 		return imposto;
+	}
+
+
+	public Tipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+	@Override
+	public String toString() {
+		return "ID: " + id + ". Produto: " + nome + ". Descricao: " + descricao + ". Valor unitário: R$" + precoUnitario + ". Quantidade em estoque: " + quantidadeEstoque + ". Tributacao: " + tipo ;
+		
 	}
 }

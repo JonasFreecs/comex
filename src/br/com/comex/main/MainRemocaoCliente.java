@@ -1,10 +1,11 @@
-package br.com.comex.modelo;
+package br.com.comex.main;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import br.com.comex.jdbc.ClienteDAO;
 import br.com.comex.jdbc.ConnectionFactory;
+import br.com.comex.modelo.Cliente;
 
 public class MainRemocaoCliente {
 	public static void main(String[] args) throws SQLException {
