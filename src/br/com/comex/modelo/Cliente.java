@@ -1,5 +1,7 @@
 package br.com.comex.modelo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
 public class Cliente {
 	private int id;
 	private String nome;
@@ -12,6 +14,9 @@ public class Cliente {
 	private String cidade;
 	private String estado;
 	
+	public Cliente() {
+		
+	}
 	public Cliente(String nome, String cpf, String telefone, String rua, int numero, String complemento, String bairro, String cidade, String estado) {
 		this.nome = nome;
 		this.cpf = cpf;
@@ -21,6 +26,33 @@ public class Cliente {
 		this.complemento = complemento;
 		this.bairro = bairro;
 		this.cidade = cidade;
+		this.estado = estado;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public Cliente (int id) {

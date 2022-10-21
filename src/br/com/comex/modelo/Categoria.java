@@ -5,6 +5,10 @@ public class Categoria {
 	private String categoriaNome;
 	private Status status = Status.ATIVA;
 	
+public Categoria() {
+	
+}
+	
 	public Categoria( Long id, String nome) {
 		
 		this.categoriaNome = nome;

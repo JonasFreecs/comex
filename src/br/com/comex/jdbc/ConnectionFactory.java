@@ -16,7 +16,6 @@ public class ConnectionFactory {
 		comboPooledDataSource.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
 		comboPooledDataSource.setUser("system");
 		comboPooledDataSource.setPassword("12345");
-		//Max pool size implementado apenas para testes, não afeta as tarefas em si
 		comboPooledDataSource.setMaxPoolSize(15);;
 		
 		this.dataSource = comboPooledDataSource;
