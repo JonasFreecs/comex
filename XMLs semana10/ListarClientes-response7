@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:listarClientesResponse xmlns:ns2="http://ws.comex.com.br/">
+         <return>
+            <bairro>BAIRRO TESTE</bairro>
+            <cidade>CIDADE TESTE</cidade>
+            <complemento>NENHUM</complemento>
+            <cpf>123456789</cpf>
+            <estado>MG</estado>
+            <id>8</id>
+            <nome>JONAS RAMONES</nome>
+            <numero>55</numero>
+            <rua>RUA TESTE</rua>
+            <telefone>3599999-9999</telefone>
+         </return>
+         <return>
+            <bairro>BAIRRO</bairro>
+            <cidade>CIDADE</cidade>
+            <complemento>NENHUM</complemento>
+            <cpf>123456</cpf>
+            <estado>UF</estado>
+            <id>28</id>
+            <nome>JORGE</nome>
+            <numero>45</numero>
+            <rua>RUA</rua>
+            <telefone>35990099</telefone>
+         </return>
+      </ns2:listarClientesResponse>
+   </S:Body>
+</S:Envelope>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.comex.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:adicionarCliente>
+         <arg0>
+            <bairro>BAIRRO SOAPUI</bairro>
+            <cidade>SOAPUI</cidade>
+            <complemento>NENHUM</complemento>
+            <cpf>789456123</cpf>
+            <estado>RJ</estado>
+
+            <nome>CLIENTE SOAPUI</nome>
+            <numero>89</numero>
+            <rua>SOAPUI</rua>
+
+            <telefone>35989898989</telefone>
+         </arg0>
+      </ws:adicionarCliente>
+   </soapenv:Body>
+</soapenv:Envelope>

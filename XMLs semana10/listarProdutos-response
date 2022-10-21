@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:listarProdutosResponse xmlns:ns2="http://ws.comex.com.br/">
+         <return>
+            <categoriaId>69</categoriaId>
+            <id>10</id>
+            <nome>Redmi note 11</nome>
+            <precoUnitario>1500.99</precoUnitario>
+            <quantidadeEstoque>5</quantidadeEstoque>
+            <tipo>NAO_ISENTO</tipo>
+         </return>
+         <return>
+            <categoriaId>69</categoriaId>
+            <descricao>Celular</descricao>
+            <id>11</id>
+            <nome>Iphone 14S</nome>
+            <precoUnitario>1500.99</precoUnitario>
+            <quantidadeEstoque>5</quantidadeEstoque>
+            <tipo>NAO_ISENTO</tipo>
+         </return>
+         <return>
+            <categoriaId>69</categoriaId>
+            <descricao>CATEGORIA DE TESTE</descricao>
+            <id>9</id>
+            <nome>PRODUTO TESTE INSERCAO</nome>
+            <precoUnitario>9.5</precoUnitario>
+            <quantidadeEstoque>10</quantidadeEstoque>
+            <tipo>NAO_ISENTO</tipo>
+         </return>
+      </ns2:listarProdutosResponse>
+   </S:Body>
+</S:Envelope>

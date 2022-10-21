@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:listarCategoriasResponse xmlns:ns2="http://ws.comex.com.br/">
+         <return>
+            <categoriaNome>CATSOAPUI</categoriaNome>
+            <id>112</id>
+            <status>ATIVA</status>
+         </return>
+         <return>
+            <categoriaNome>INFORMATICA TESTE</categoriaNome>
+            <id>69</id>
+            <status>ATIVA</status>
+         </return>
+         <return>
+            <categoriaNome>LIVROS</categoriaNome>
+            <id>108</id>
+            <status>ATIVA</status>
+         </return>
+         <return>
+            <categoriaNome>MOVEIS</categoriaNome>
+            <id>109</id>
+            <status>ATIVA</status>
+         </return>
+         <return>
+            <categoriaNome>ELETRODOMESTICOS</categoriaNome>
+            <id>110</id>
+            <status>ATIVA</status>
+         </return>
+         <return>
+            <categoriaNome>TESTE</categoriaNome>
+            <id>111</id>
+            <status>ATIVA</status>
+         </return>
+      </ns2:listarCategoriasResponse>
+   </S:Body>
+</S:Envelope>
