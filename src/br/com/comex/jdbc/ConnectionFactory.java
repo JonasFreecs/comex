@@ -13,7 +13,8 @@ public class ConnectionFactory {
 	
 	public ConnectionFactory() {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
-		comboPooledDataSource.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
+//		IP da string de conexão tem que ser o ip do container que tem o banco oracle, ou utilizando bridge
+		comboPooledDataSource.setJdbcUrl("jdbc:oracle:thin:@172.17.0.2:1521:xe");
 		comboPooledDataSource.setUser("system");
 		comboPooledDataSource.setPassword("admin");
 		comboPooledDataSource.setMaxPoolSize(15);;
